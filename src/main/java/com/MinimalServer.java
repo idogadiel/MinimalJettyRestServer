@@ -6,6 +6,12 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 
+
+/*
+part 1/2 of the minimal server
+ */
+
+
 public class MinimalServer {
 
 	public static void main(String[] args) throws Exception {
