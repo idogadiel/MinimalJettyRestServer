@@ -20,7 +20,8 @@ part 1/2 of the minimal server
 public class MinimalServer {
 
 	public static void main(String[] args) throws Exception {
-		// create new Server
+
+		// Creating the new Server
 		Server server = new Server(9999);
 
 		//1.Creating resource for ui
@@ -46,8 +47,7 @@ public class MinimalServer {
 		server.setHandler(handlers);
 
 
-
-		// Starting the com.MinimalServer
+		// Starting the MinimalServer
 		server.start();
 		System.out.println("Started!");
 		server.join();
