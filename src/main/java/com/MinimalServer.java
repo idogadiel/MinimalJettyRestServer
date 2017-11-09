@@ -19,7 +19,14 @@ part 1/2 of the minimal server
 
 public class MinimalServer {
 
+	private static final String proxyHost = "proxy.il.hpecorp.net";
+	private static final String proxyPort = "8080";
+
 	public static void main(String[] args) throws Exception {
+
+		// setting proxy
+		System.setProperty("https.proxyHost", proxyHost);
+		System.setProperty("https.proxyPort", proxyPort);
 
 		// Creating the new Server
 		Server server = new Server(9999);

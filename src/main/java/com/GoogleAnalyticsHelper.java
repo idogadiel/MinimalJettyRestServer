@@ -23,8 +23,11 @@ public class GoogleAnalyticsHelper {
 
 	private static final String APPLICATION_NAME = "Hello Analytics Reporting";
 	private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
-	private static final String KEY_FILE_LOCATION = "<REPLACE_WITH_JSON_FILE>";
-	private static final String VIEW_ID = "<REPLACE_WITH_VIEW_ID>";
+	private static final String KEY_FILE_LOCATION = "C:\\repo\\BizDevOps-87d300dadb2a.json";
+	private static final String VIEW_ID = "10429890";
+
+
+
 
 	public void getReport() {
 		try {
@@ -35,7 +38,6 @@ public class GoogleAnalyticsHelper {
 			e.printStackTrace();
 		}
 	}
-
 
 
 	private static AnalyticsReporting initializeAnalyticsReporting() throws GeneralSecurityException, IOException {
@@ -79,6 +81,7 @@ public class GoogleAnalyticsHelper {
 		// Create the GetReportsRequest object.
 		GetReportsRequest getReport = new GetReportsRequest()
 				.setReportRequests(requests);
+
 
 		// Call the batchGet method.
 		GetReportsResponse response = service.reports().batchGet(getReport).execute();
